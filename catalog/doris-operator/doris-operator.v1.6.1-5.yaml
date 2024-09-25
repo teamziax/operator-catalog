@@ -1,0 +1,62 @@
+---
+image: quay.io/ziax/doris-operator-bundle:1.6.1-5
+name: doris-operator.v1.6.1-5
+package: doris-operator
+properties:
+- type: olm.gvk
+  value:
+    group: doris.selectdb.com
+    kind: DorisCluster
+    version: v1
+- type: olm.package
+  value:
+    packageName: doris-operator
+    version: 1.6.1-5
+- type: olm.csv.metadata
+  value:
+    annotations:
+      alm-examples: '[]'
+      capabilities: Basic Install
+      createdAt: "2024-09-25T19:50:09Z"
+      description: Doris Kubernetes operator
+      operatorframework.io/suggested-namespace: openshift-operators
+      operators.operatorframework.io/builder: operator-sdk-v1.37.0
+      operators.operatorframework.io/project_layout: go.kubebuilder.io/v4
+      repository: https://github.com/apache/doris-operator
+      support: Apache Doris
+    apiServiceDefinitions: {}
+    crdDescriptions:
+      owned:
+      - kind: DorisCluster
+        name: dorisclusters.doris.selectdb.com
+        version: v1
+    description: Doris Kubernetes operator
+    displayName: Doris Operator
+    installModes:
+    - supported: false
+      type: OwnNamespace
+    - supported: false
+      type: SingleNamespace
+    - supported: false
+      type: MultiNamespace
+    - supported: true
+      type: AllNamespaces
+    keywords:
+    - database
+    - doris
+    - analytics
+    links:
+    - name: Doris Operator
+      url: https://github.com/apache/doris-operator
+    maturity: alpha
+    provider:
+      name: Apache Doris
+      url: https://doris.apache.org/
+relatedImages:
+- image: quay.io/okderators/kube-rbac-proxy:4.15
+  name: ""
+- image: quay.io/ziax/doris-operator-bundle:1.6.1-5
+  name: ""
+- image: quay.io/ziax/doris-operator:1.6.1
+  name: ""
+schema: olm.bundle
