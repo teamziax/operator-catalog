@@ -1,0 +1,10 @@
+---
+schema: olm.package
+name: spark-operator
+defaultChannel: alpha
+---
+schema: olm.channel
+package: spark-operator
+name: alpha
+entries:
+  - name: spark-operator.v2.0.0-18

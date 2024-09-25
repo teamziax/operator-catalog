@@ -1,0 +1,10 @@
+---
+schema: olm.package
+name: doris-operator
+defaultChannel: alpha
+---
+schema: olm.channel
+package: doris-operator
+name: alpha
+entries:
+  - name: doris-operator.v1.6.1-5
