@@ -17,6 +17,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 cd "$(dirname "$0")"
+rm catalog/$OPERATOR/$OPERATOR.v*.yaml
 opm render quay.io/ziax/$OPERATOR-bundle:$VERSION -o yaml > catalog/$OPERATOR/$OPERATOR.v$VERSION.yaml
 cp catalog/$OPERATOR/$OPERATOR.yaml.template catalog/$OPERATOR/$OPERATOR.yaml
 $SED_CMD -i 's/$VERSION/'$VERSION'/g' catalog/$OPERATOR/$OPERATOR.yaml
