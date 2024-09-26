@@ -1,10 +1,10 @@
 ---
 schema: olm.package
-name: spark-operator
+name: doris-operator
 defaultChannel: alpha
 ---
 schema: olm.channel
-package: spark-operator
+package: doris-operator
 name: alpha
 entries:
-  - name: spark-operator.v2.0.0-27
+  - name: doris-operator.v$VERSION

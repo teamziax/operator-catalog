@@ -19,12 +19,12 @@ fi
 cd "$(dirname "$0")"
 rm catalog/$OPERATOR/$OPERATOR.v*.yaml
 opm render quay.io/ziax/$OPERATOR-bundle:$VERSION -o yaml > catalog/$OPERATOR/$OPERATOR.v$VERSION.yaml
-cp catalog/$OPERATOR/$OPERATOR.yaml.template catalog/$OPERATOR/$OPERATOR.yaml
+cp catalog-templates/$OPERATOR.yaml catalog/$OPERATOR/$OPERATOR.yaml
 $SED_CMD -i 's/$VERSION/'$VERSION'/g' catalog/$OPERATOR/$OPERATOR.yaml
 if [ "$BUILD_IMAGE" = true ]; then
   docker build -f catalog.Containerfile -t quay.io/ziax/operator-catalog:latest . --platform=linux/amd64
   docker push quay.io/ziax/operator-catalog:latest
 fi
-git add .
-git commit -m "Update $OPERATOR to version $VERSION"
-git push
+# git add .
+# git commit -m "Update $OPERATOR to version $VERSION"
+# git push
