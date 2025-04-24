@@ -7,4 +7,4 @@ schema: olm.channel
 package: spark-operator
 name: alpha
 entries:
-  - name: spark-operator.v2.0.0-27
+  - name: spark-operator.v2.1.1-rc0
