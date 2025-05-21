@@ -1,0 +1,12 @@
+---
+schema: olm.package
+name: ziax-redis-operator
+defaultChannel: alpha
+---
+schema: olm.channel
+package: ziax-redis-operator
+name: alpha
+entries:
+  - name: ziax-redis-operator.v1.0.0-2
+  - name: ziax-redis-operator.v2.0.0-1
+    replaces: ziax-redis-operator.v1.0.0-2
