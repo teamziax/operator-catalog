@@ -10,3 +10,5 @@ entries:
   - name: ziax-redis-operator.v2.0.3-9
     skips:
       - ziax-redis-operator.v2.0.2-5
+  - name: ziax-redis-operator.v2.0.4
+    replaces: ziax-redis-operator.v2.0.3-9
