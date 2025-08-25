@@ -1,0 +1,10 @@
+---
+schema: olm.package
+name: metallb-operator
+defaultChannel: alpha
+---
+schema: olm.channel
+package: metallb-operator
+name: alpha
+entries:
+  - name: metallb-operator.v4.18.0-2025-08-25-142851
